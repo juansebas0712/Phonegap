@@ -1,7 +1,8 @@
 $(document).bind("mobileinit", function(){
 	$.mobile.defaultPageTransition = "slide";
+  $('a, button').bind('vclick', function(){});
 });
-var pictureSource;   // picture source
+	var pictureSource;   // picture source
     var destinationType; // sets the format of returned value 
 
     // Wait for Cordova to connect with the device
@@ -59,7 +60,7 @@ var pictureSource;   // picture source
     //
     function capturePhoto() {
       // Take picture using device camera and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 80,
         destinationType: destinationType.DATA_URL });
     }
 
@@ -83,5 +84,5 @@ var pictureSource;   // picture source
     // Called if something bad happens.
     // 
     function onFail(message) {
-      alert('Failed because: ' + message);
+      alert('No se pudo realizar la acción por que: ' + message);
     }
