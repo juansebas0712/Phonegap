@@ -17,6 +17,10 @@ $(document).bind("mobileinit", function(){
     // Cordova is ready to be used!
     //
     function onDeviceReady() {
+      $(function() {
+            FastClick.attach(document.body);
+        });
+      
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
         $('a, button').addEventListener('touchstart');
