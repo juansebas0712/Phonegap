@@ -1,9 +1,7 @@
 $(document).bind("mobileinit", function(){
 	$.mobile.defaultPageTransition = "slide";
 
-  $(function() {
-    FastClick.attach(document.body);
-});
+ 
 
   //$('a, button').addEventListener('touchstart');
 });
@@ -20,7 +18,7 @@ $(document).bind("mobileinit", function(){
       $(function() {
             FastClick.attach(document.body);
         });
-      
+
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
         $('a, button').addEventListener('touchstart');
