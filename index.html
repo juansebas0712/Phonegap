@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="js/cordova.js"></script>
-<script type="text/javascript" src="js/jquery.mobile-1.3.1.min.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.3.1.min.js"></script>
 <link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.1.min.css">
 <title>Aplic. Web de jQuery Mobile</title>
 
@@ -14,14 +14,14 @@
 	 Para configurar el sitio como aplicación móvil, vaya a Sitio -> Aplicaciones móviles -> Configurar framework de aplicación... -->
 </head> 
 <body> 
-	<div data-role="page">
+	<div data-role="page" id="inicio">
 		<div data-role="header">
 			<h1>App de prueba</h1>
 
 		</div>
 		<div data-role="content">
 			<ul data-role="listview">
-				<li><a href="#camara">Camara</a></li>
+				<li><a data-transition="slide" href="#camara">Camara</a></li>
 			</ul>
 		</div>
 		<div data-role="footer">
@@ -34,10 +34,10 @@
 			<h1>App de prueba</h1>
 		</div>
 		<div data-role="content">
-			<button data-role="button" onclick="capturePhoto();">Capture Photo</button> <br>
-		    <button data-role="button" onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-		    <button data-role="button" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-		    <button data-role="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+			<button data-role="button" onclick="capturePhoto();">Capturar foto</button> <br>
+		    <button data-role="button" onclick="capturePhotoEdit();">Capturar foto editable</button> <br>
+		    <button data-role="button" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">Desde libreria de fotos</button><br>
+		    <button data-role="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Desde album</button><br>
 		    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
 		    <img style="display:none;" id="largeImage" src="" />
 		</div>
