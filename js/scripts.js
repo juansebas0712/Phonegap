@@ -1,6 +1,7 @@
 $(document).bind("mobileinit", function(){
 	$.mobile.defaultPageTransition = "slide";
-  $('a, button').addEventListener('touchstart');
+
+  //$('a, button').addEventListener('touchstart');
 });
 	var pictureSource;   // picture source
     var destinationType; // sets the format of returned value 
@@ -14,6 +15,7 @@ $(document).bind("mobileinit", function(){
     function onDeviceReady() {
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
+        $('a, button').addEventListener('touchstart');
     }
 
     // Called when a photo is successfully retrieved
