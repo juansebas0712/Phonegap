@@ -1,6 +1,10 @@
 $(document).bind("mobileinit", function(){
 	$.mobile.defaultPageTransition = "slide";
 
+  $(function() {
+    FastClick.attach(document.body);
+});
+
   //$('a, button').addEventListener('touchstart');
 });
 	var pictureSource;   // picture source
