@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Notificaciones</title>
+<script src="phonegap-1.1.0.js"></script>
+<script>
+
+document.addEventListener("deviceready", function() {
+	// Reproducir un beep
+	navigator.notification.beep(2);
+	
+	// Vibrar el equipo
+	navigator.notification.vibrate(400);
+	
+	// Mensaje de alerta
+	navigator.notification.alert("Este es un mensaje", function() {
+		
+	}, "Mi aplicación", "Aceptar");
+	
+	// Pregunta de confirmación
+	navigator.notification.confirm("¿Desea eliminar?", function(button) {
+		if (button==1) {
+			
+		}
+	}, "Eliminar Contactos", "Si,No");
+}, false);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contactos</title>
+<script src="phonegap-1.1.0.js"></script>
+<script>
+
+document.addEventListener("deviceready", function() {
+	document.getElementById("btnAgregar").addEventListener("click", function() {
+		
+		// Grabamos un contacto
+		var contacto = navigator.contacts.create();
+		contacto.displayName = "video2brain";
+		
+		contacto.name = new ContactName();
+		contacto.name.givenName = "video";
+		contacto.name.familyName = "2brain";
+		
+		contacto.phoneNumbers = [];
+		contacto.phoneNumbers[0] = new ContactField("work", "222-444-5555", true);
+		
+		contacto.save(function() { alert("OK"); }, function() { alert("ERROR")});
+		
+	}, false);
+	
+	document.getElementById("btnLeerContactos").addEventListener("click", function() {
+		navigator.contacts.find(["*"], function(contactos) {
+			for (var i=0; i<contactos.length; i++) {
+				var contacto = contactos[i];
+				alert(contacto.displayName);	
+			}
+		}, function() {
+			alert("No se han podido leer los contactos");
+		});
+		
+	}, false);
+	
+}, false);
+
+
+
+</script>
+</head>
+
+<body>
+<input type="button" id="btnAgregar">
+<input type="button" id="btnLeerContactos">
+</body>
+</html>

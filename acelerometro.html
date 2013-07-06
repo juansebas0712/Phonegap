@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Acelerómetro</title>
+<script src="phonegap-1.1.0.js"></script>
+<script>
+var acelerometroId;
+
+document.addEventListener("deviceready", function() {
+	acelerometroId = navigator.accelerometer.watchAcceleration(acelera, error);
+}, false);
+
+function error() {
+	alert("No se puede leer el acelerómetro");	
+}
+
+function acelera(aceleracion) {
+	var x = aceleracion.x;
+	var y = aceleracion.y;
+	var z = aceleracion.z;
+	var time = aceleracion.timestamp;	
+}
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
