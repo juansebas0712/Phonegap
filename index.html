@@ -34,7 +34,12 @@
 			<h1>App de prueba</h1>
 		</div>
 		<div data-role="content">
-			<button data-role="button" onclick="captureImage();">Capture Image</button>
+			<button data-role="button" onclick="capturePhoto();">Capture Photo</button> <br>
+		    <button data-role="button" onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+		    <button data-role="button" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+		    <button data-role="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+		    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+		    <img style="display:none;" id="largeImage" src="" />
 		</div>
 		<div data-role="footer">
 			<h1>Footer</h1>
