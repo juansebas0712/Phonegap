@@ -2,14 +2,73 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=no">
-<script type="text/javascript" src="cordova.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="phonegap-1.2.0.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.min.css">
+
+<script>
+
+var capturador;
+
+document.addEventListener("deviceready", function() {
+	capturador = navigator.device.capture;
+}, false);
+
+function audio() {
+	capturador.captureAudio(capturoOk, capturoError);	
+}
+
+function imagen() {
+	capturador.captureImage(capturoOk, capturoError);	
+}
+
+function audio() {
+	capturador.captureVideo(capturoOk, capturoError);	
+}
+
+function capturoError() {
+	alert("Error al capturar");	
+}
+
+function capturoOk(archivos) {
+	for (var i=0; i<archivos.length; i++) {
+		var ruta = archivos[i].fullPath;
+		var type = archivos[i].type;	
+	}
+}
+
+</script>
 <title>Aplic. Web de jQuery Mobile</title>
 
 <!-- Esta referencia a phonegap.js permitirá disponer de sugerencias para el código, siempre y cuando el sitio actual se haya configurado como aplicación móvil. 
 	 Para configurar el sitio como aplicación móvil, vaya a Sitio -> Aplicaciones móviles -> Configurar framework de aplicación... -->
 </head> 
 <body> 
-Bienvenidos a mi aplicación móvil para múltiples dispositivos
+	<div data-role="page">
+		<div data-role="header">
+			<h1>App de prueba</h1>
+		</div>
+		<div data-role="content">
+		<!--	<ul data-role="listview">
+				<li><a href="acelerometro.html">Acelerometro</a></li>
+				<li><a href="capturar.html">Camara</a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+				<li><a href="#"></a></li>
+			</ul>-->
+			<a data-role="button" href="javascript:audio()">Audio</a>
+			<a data-role="button" href="javascript:imagen()">Imagen</a>
+			<a data-role="button" href="javascript:video()">Video</a>
+		</div>
+		<div data-role="footer">
+			<h1>Footer</h1>
+		</div>
+	</div>
 </body>
 </html>
