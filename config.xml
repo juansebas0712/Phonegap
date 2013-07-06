@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.video2brain.phonegap" version="1.0">
 
-	<name>video2brain</name>
+	<name>Prueba</name>
 	
 	<description>Esta es una aplicación de prueba para video2brain</description>
 	
 	<author href="http://firt.mobi" email="algo@algo.com">Juan S. aparicio</author>
 	
-	<icon src="icono.png" gap:role="default" />
-
-	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	
-	<preference name="orientation" value="landscape" />
+	<preference name="orientation" value="both" />
 	
 	<gap:platform>
 		<gap:platform name="symbian.wrt" />
