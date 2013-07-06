@@ -1,6 +1,6 @@
 $(document).bind("mobileinit", function(){
 	$.mobile.defaultPageTransition = "slide";
-  $('a, button').bind('vclick', function(){});
+  $('a, button').addEventListener('touchstart');
 });
 	var pictureSource;   // picture source
     var destinationType; // sets the format of returned value 
