@@ -1,0 +1,16 @@
+.jp-gui.jp-interface > ul{
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.jp-gui.jp-interface > ul > li{
+	display: inline-block;
+	list-style: none;
+}
+.jp-gui.jp-interface a{
+	display: block;
+	text-decoration: none;
+}
+.jp-gui.jp-interface a img{
+	margin-bottom: 12px;
+}
