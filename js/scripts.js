@@ -1,10 +1,4 @@
-$(document).bind("mobileinit", function(){
-	$.mobile.defaultPageTransition = "slide";
 
- 
-
-  //$('a, button').addEventListener('touchstart');
-});
 	var pictureSource;   // picture source
     var destinationType; // sets the format of returned value 
 
@@ -19,8 +13,14 @@ $(document).bind("mobileinit", function(){
             FastClick.attach(document.body);
         });
 
+        ////////////////// CAMARA ///////////////////////
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
+
+        //////////////// GEOLOCALIZACION ///////////////
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+
         $('a, button').addEventListener('touchstart');
     }
 
@@ -93,4 +93,25 @@ $(document).bind("mobileinit", function(){
     // 
     function onFail(message) {
       alert('No se pudo realizar la acción por que: ' + message);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          + position.timestamp                    + '<br />';
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
     }

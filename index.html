@@ -32,7 +32,7 @@
 
 	<div data-role="page" id="camara" data-add-back-btn="true">
 		<div data-role="header">
-			<h1>App de prueba</h1>
+			<h1>Camara</h1>
 		</div>
 		<div data-role="content">
 			<button data-role="button" onclick="capturePhoto();">Capturar foto</button> <br>
@@ -41,6 +41,18 @@
 		    <button data-role="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Desde album</button><br>
 		    <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
 		    <img style="display:none;" id="largeImage" src="" />
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h1>Footer</h1>
+		</div>
+	</div>
+
+	<div data-role="page" id="camara" data-add-back-btn="true">
+		<div data-role="header">
+			<h1>Geolocalizacion</h1>
+		</div>
+		<div data-role="content">
+			<p id="geolocation">Finding geolocation...</p>
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<h1>Footer</h1>
