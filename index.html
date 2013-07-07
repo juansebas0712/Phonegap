@@ -23,7 +23,8 @@
 		<div data-role="content">
 			<ul data-role="listview">
 				<li><a data-transition="slide" href="#camara">Camara</a></li>
-				<li><a data-transition="slide" href="#geo">Camara</a></li>
+				<li><a data-transition="slide" href="#geo">GeoLocalizacion</a></li>
+				<li><a data-transition="slide" href="#audio">Capturar Audio</a></li>
 			</ul>
 		</div>
 		<div data-role="footer" data-position="fixed">
@@ -54,6 +55,18 @@
 		</div>
 		<div data-role="content">
 			<p id="geolocation">Finding geolocation...</p>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h1>Footer</h1>
+		</div>
+	</div>
+
+	<div data-role="page" id="audio" data-add-back-btn="true">
+		<div data-role="header">
+			<h1>Audio</h1>
+		</div>
+		<div data-role="content">
+			<button data-role="button" onclick="captureAudio();">Capture Audio</button> <br>
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<h1>Footer</h1>
