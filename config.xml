@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.video2brain.phonegap" version="1.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" 
+	id="com.video2brain.phonegap" version="1.0">
 
 	<name>Prueba</name>
 	
 	<description>Esta es una aplicación de prueba para video2brain</description>
 	
 	<author href="http://firt.mobi" email="algo@algo.com">Juan S. aparicio</author>
-	
-	
+	<icon src="images/icono.png" gap:role="default"/>	
+
 	<preference name="orientation" value="both" />
 	
+	<!--funcionando solo para las siguientes plataformas: -->
 	<gap:platform>
 		<gap:platform name="symbian.wrt" />
 		<gap:platform name="android" minVersion="2.3" />
