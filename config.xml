@@ -2,8 +2,8 @@
 <widget xmlns = "http://www.w3.org/ns/widgets" 
     xmlns:gap = "http://phonegap.com/ns/1.0" 
 	       id = "com.video2brain.phonegap" 
-	  version = "1.0">
-
+	  version = "2.6.0">
+		<!--cambiando de version 1.0 a 2.6.0 para ver que cambios trae -->
 	<name>Prueba</name>
 	
 	<description>Esta es una aplicación de prueba para video2brain</description>
@@ -12,7 +12,8 @@
 	<icon src="images/icono.png" gap:role="default"/>	
 
 	<preference name="orientation" value="both" />
-	
+
+	<plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
 	<!--funcionando solo para las siguientes plataformas: -->
 	<gap:platform>
 		<gap:platform name="symbian.wrt" />
