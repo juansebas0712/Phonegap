@@ -167,6 +167,13 @@
       watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, opciones);
     }
 
+    function stopWatch() {
+      if (watchID) {
+        watchID = navigator.accelerometer.clearWatch(watchID);
+        watchID = null;
+      }
+    }
+
     function onSuccess(acceleration) {
       var aceX = document.getElementById('aceleraX');
       aceX.value = acceleration.x;
