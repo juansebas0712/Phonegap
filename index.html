@@ -116,7 +116,35 @@
 				
 		</div>
 		<div data-role="content">
-			Welcome! and go on!
+			
+			<form>
+				<div data-role="fieldcontain">
+					<label for="aceleraX">
+						Aceleración en X
+					</label>
+					<input id="aceleraX" name="acelX" type="text" data-mini="true" value="0" readonly>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="aceleraY">
+						Aceleración en Y
+					</label>
+					<input id="aceleraY" name="acelY" type="text" data-mini="true" value="0" readonly>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="aceleraZ">
+						Aceleración en Z
+					</label>
+					<input id="aceleraZ" name="acelZ" type="text" data-mini="true" value="0" readonly>
+				</div>
+				<div data-role="fieldcontain">
+					<button data-mini="true">
+						Detener lectura del Acelerómetro
+					</button>
+				</div>
+			</form>
+
+			<button data-role="button" onclick="startWatch();">Comenzar</button> 
+
 		</div>
 
 		<div data-role="footer" data-position="fixed">

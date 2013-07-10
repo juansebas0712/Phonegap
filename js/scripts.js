@@ -159,4 +159,26 @@
     }
 
 
-    
+
+    var watchID = null;
+
+    function startWatch() {
+      var opciones = { frequency: 1000 };
+      watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, opciones);
+    }
+
+    function onSuccess(acceleration) {
+      var aceX = document.getElementById('aceleraX');
+      aceX.value = acceleration.x;
+
+      var aceY = document.getElementById('aceleraY');
+      aceY.value = acceleration.y;
+
+      var aceZ = document.getElementById('aceleraZ');
+      aceZ.value = acceleration.z;
+    }
+
+    function onError() {
+      alert('¡Error!');
+    }
+
